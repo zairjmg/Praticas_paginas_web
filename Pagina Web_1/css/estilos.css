@@ -1,0 +1,380 @@
+/* font
+font-family: 'PT Serif', serif;
+font-family: 'Quicksand', sans-serif;
+*/
+
+/* color
+#eeeeee
+#000000
+#2b2a2a
+#757575
+#c0c0c0
+#adadad
+#888888
+#4e4e4e
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Serif', serif;
+}
+
+a, p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    padding: 20px;
+    background: #FBFCFC;
+    color: #000000;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header            header          header"
+                         "main              main            main"
+                         "aside             aside           aside"
+                         "seccion_widget    seccion_widget  seccion_widget"
+                         "contenido         contenido       sidebar"
+                         "footer            footer          footer"
+}
+
+.header {
+    display: grid;
+    grid-gap: 5px;
+    grid-area: header;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.header > a,
+.header > h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header > .form-group {
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.header .form-group > a {
+    margin-right: 10px;
+}
+
+.header a {
+    color: #757575;
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+.menu {
+    padding: 5px;
+    grid-area: main;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    padding: 10px 10px;
+    display: inline-block;
+    color: #4e4e4e;
+}
+
+.menu li a:hover {
+    color: #4e4e4e;
+}
+
+.aside {
+    padding: 20px;
+    background: #343a40;
+    grid-area: aside;
+    border-radius: 10px;
+}
+
+.aside > p,
+.aside > a {
+    color: #eeeeee;
+    text-align: justify;
+}
+
+.aside > h2 {
+    color: #eeeeee;
+    font-size: 35pt;
+}
+
+.aside a:hover {
+    color: #eeeeee;
+}
+
+.seccion_widget {
+    display: grid;
+    grid-gap: 10px;
+    grid-area: seccion_widget;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.widget_1,
+.widget_2 {
+    min-height: 100px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+.widget_1 {
+    background: #c0c0c0;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    display: flex;
+    align-items: auto;
+    justify-content: start;
+}
+
+.widget_1:hover {
+    background: #adadad;
+}
+
+.widget_1 > h3 {
+    height: 100%;
+    padding: 5px;
+    background: #888888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.widget_1 > h3:hover {
+    background: #4e4e4e;
+    color: #eeeeee;
+}
+
+.widget_1 > p {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.widget_2 {
+    background: #c0c0c0;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    display: flex;
+    align-items: auto;
+    justify-content: start;
+}
+
+.widget_2:hover {
+    background: #adadad;
+}
+
+.widget_2 > h3 {
+    height: 100%;
+    padding: 5px;
+    background: #888888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.widget_2 > h3:hover {
+    background: #4e4e4e;
+    color: #eeeeee;
+}
+
+.widget_2 > p {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.contenido {
+    display: grid;
+    grid-gap: 5px;
+    grid-area: contenido;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "col1      col1"
+                         "col2      col3"
+                         "botones   botones" 
+}
+
+.contenido > section {
+    padding: 10px;
+}
+
+.col1 {
+    grid-area: col1;
+}
+
+.col2 {
+    grid-area: col2;
+}
+
+.col3 {
+    grid-area: col3;
+}
+
+.botones {
+    padding: 10px;
+    grid-gap: botones;
+}
+
+.sidebar {
+    /*display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr;*/
+    padding: 10px;
+}
+
+.sidebar > section {
+    min-height: 100px;
+    max-height: 150px;
+    min-width: 100px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: #cecece;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.sidebar section h3 {
+    text-align: center;
+}
+
+.sidebar section > p {
+    text-align: justify;
+    font-size: 9pt;
+}
+
+.sidebar ul {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
+.sidebar .lista,
+.sidebar .redes {
+    padding: 10px;
+}
+
+.footer {
+    padding: 10px;
+    background: #D0D3D4;
+    grid-area: footer;
+    text-align: center;
+    border-top: 1px solid #B3B6B7;
+}
+
+.footer > p {
+    margin: 0;
+}
+
+/*.contenedor header,
+.contenedor main,
+.contenedor aside,
+.contenedor section,
+.contenedor nav,
+.contenedor footer,
+.contenedor div {
+    border: 1px solid #000000;
+}*/
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: "header"
+                             "main"
+                             "aside"
+                             "seccion_widget"
+                             "contenido"
+                             "sidebar"
+                             "footer"
+    }
+
+    .header .form-group {
+        padding-right: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .seccion_widget {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .contenido {
+        grid-template-columns: 1fr;
+        grid-template-areas: "col1"
+                             "col2"
+                             "col3"
+                             "botones"
+    }
+
+    .sidebar {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "lista     redes"
+                             "seccion   seccion"
+    }
+
+    .sidebar section > p {
+        text-align: justify;
+        font-size: auto;
+    }
+
+    .sidebar > section {
+        grid-area: seccion;
+        margin-bottom: 0px;
+    }
+
+    .sidebar > div {
+        grid-area: lista;
+    }
+
+    .sidebar ul {
+        margin-bottom: 0px;
+    }
+
+    .sidebar > nav {
+        grid-area: redes;
+    }
+
+    .sidebar .redes {
+        text-align: right;
+    }
+}
