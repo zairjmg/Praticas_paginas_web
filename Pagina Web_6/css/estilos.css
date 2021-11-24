@@ -1,0 +1,109 @@
+:root {
+    --font-primary: "Open Sans", Sans-serif;
+    --background-1: #30336b;
+    --background-2: #0fbcf9;
+    --background-3: #fff;
+    --color-font-1: #fff;
+    --color-font-2: #2d2d2d;
+    --color-font-3: #0fbcf9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--background-1);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: min(1600px, 100%);
+    margin: auto;
+}
+
+.pricing-card {
+    flex: 1;
+    max-width: 360px;
+    background-color: var(--background-3);
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: var(--color-font-2);
+    transition: .3 linear;
+}
+
+.pricing-card-header {
+    background-color: var(--background-2);
+    display: inline-block;
+    color: var(--color-font-1);
+    padding: 12px 30px;
+    border-radius:  0 0 20px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+}
+
+.pricing-card:hover .pricing-card-header {
+    box-shadow: 0 0 0 26em var(--background-2);    
+}
+
+.price {
+    font-size: 70px;
+    color: var(--color-font-3);
+    margin: 40px 0;
+    transition: .2s linear;
+}
+
+.price sup,
+.price span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.pricing-card:hover,
+.pricing-card:hover .price {
+    color: var(--color-font-1);
+}
+
+.pricing-card li {
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.order-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid var(--background-2);
+    color: var(--color-font-3);
+    padding: 18px 40px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+.order-btn:hover {
+    background-color: var(--background-2);
+    color: var(--color-font-1);
+}
+
+@media screen and (max-width: 1100px) {
+    .pricing-card{
+        flex: 50%;
+    }
+}
